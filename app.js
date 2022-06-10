@@ -22,35 +22,35 @@ function convertToWord(letter) {
 }
 
 function win(userChoice, computerChoice) {
-    const smallUserWord = "user".fontsize(3).sub()
-    const smallCompWord = "comp".fontsize(3).sub()
+    const smallUserWord = "You".fontsize(3).sub()
+    const smallCompWord = "Comp".fontsize(3).sub()
     const userChoice_div = document.getElementById(userChoice)
     userScore++
     userScore_span.innerHTML = userScore
     computerScore_span.innerHTML = computerScore
-    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}${smallCompWord}. You Win!`
+    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}${smallCompWord}  - You Win!`
     userChoice_div.classList.add("green-glow")
     setTimeout(() => userChoice_div.classList.remove("green-glow"), 300)
 }
 
 
 function lose(userChoice, computerChoice) {
-    const smallUserWord = "user".fontsize(3).sub()
-    const smallCompWord = "comp".fontsize(3).sub()
+    const smallUserWord = "You".fontsize(3).sub()
+    const smallCompWord = "Comp".fontsize(3).sub()
     const userChoice_div = document.getElementById(userChoice)
     computerScore++
     userScore_span.innerHTML = userScore
     computerScore_span.innerHTML = computerScore
-    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} loses to ${convertToWord(computerChoice)}${smallCompWord}. You Lost..`
+    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} loses to ${convertToWord(computerChoice)}${smallCompWord}  - You Lost..`
     userChoice_div.classList.add("red-glow")
     setTimeout(() => userChoice_div.classList.remove("red-glow"), 300)
 }
 
 function draw(userChoice, computerChoice) {
-    const smallUserWord = "user".fontsize(3).sub()
-    const smallCompWord = "comp".fontsize(3).sub()
+    const smallUserWord = "You".fontsize(3).sub()
+    const smallCompWord = "Comp".fontsize(3).sub()
     const userChoice_div = document.getElementById(userChoice)
-    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} eqauls ${convertToWord(computerChoice)}${smallCompWord}. It's a Draw`
+    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} eqauls ${convertToWord(computerChoice)}${smallCompWord}  - It's a Draw`
     userChoice_div.classList.add("gray-glow")
     setTimeout(() => userChoice_div.classList.remove("gray-glow"), 300)
 }
