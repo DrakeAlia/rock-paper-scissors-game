@@ -86,3 +86,4 @@ function main() {
 }
 
 main()
+console.log("Welcome to my Rock Paper Scissors Game, Enjoy!")
